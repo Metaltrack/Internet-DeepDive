@@ -14,6 +14,10 @@ config/name="GIT_GAME"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://qc3wdnenmskp"
+
 [editor_plugins]
 
 enabled=PackedStringArray()
@@ -28,6 +32,10 @@ folder_colors={
 "res://Scripts/": "blue",
 "res://Shaders/": "purple"
 }
+
+[global_group]
+
+PLAYER=""
 
 [physics]
 

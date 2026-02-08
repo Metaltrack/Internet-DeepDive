@@ -1,0 +1,103 @@
+[gd_resource type="TileSet" format=3 uid="uid://bnmj0rm7xl55r"]
+
+[ext_resource type="Texture2D" uid="uid://n73mxdrhag46" path="res://Assets/Diceforce_assets/Tiles/Tiles.png" id="1_bmd0m"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bmd0m"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 0.95589066, 0.95589066, 0.95589066, 0.63726044, 16, -16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hmbix"]
+polygon = PackedVector2Array(-16, -16, 0.31863022, -16, 0, -0.63726044, 0.63726044, 16, -16, 16, -16, -0.63726044)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qv4lh"]
+polygon = PackedVector2Array(-16, -16, 0.95589066, -16, 0.95589066, -0.63726044, 16, 0, 16, 16, -16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4x5al"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 1.2745247, -16, 0.95589066)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sbwaf"]
+polygon = PackedVector2Array(-16, -0.31863022, 16, -0.63726044, 16, 16, -16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l1qrk"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 0.95589066, 16, 16, -1.2745228, 16, -0.63726234, 1.2745247, -16, 0.95589066)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6wxuk"]
+polygon = PackedVector2Array(-0.63726234, -16, 16, -16, 16, 16, -0.31863022, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k7cok"]
+polygon = PackedVector2Array(-0.95589256, -0.63726044, -0.63726234, -16, 16, -16, 16, 0.95589066, 16, 16, -1.2745228, 16, -16, 16, -16, -0.63726044)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8jinh"]
+texture = ExtResource("1_bmd0m")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_bmd0m")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -6.372616, -6.372616, -6.0539837, -7.0098763, 16, -16, 16)
+1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4x5al")
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -6.0539837, -16, -6.0539837, -16, -16, 16, -16)
+2:0/0 = 0
+2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_l1qrk")
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(6.0539856, 16, 6.372616, -5.7353535, -16, -6.0539837, -16, -16, 16, -16, 16, 16)
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_hmbix")
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -6.372616, -16, -6.372616, 16, -16, 16)
+2:1/0 = 0
+2:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6wxuk")
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(6.0539856, 16, 6.0539856, -16, 16, -16, 16, 16)
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+0:2/0 = 0
+0:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_qv4lh")
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -6.372616, -16, -5.7353535, 6.0539856, 16, 6.372616, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_sbwaf")
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 6.372616, 16, 6.372616, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_k7cok")
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 6.372616, 6.372616, 6.691246, 6.0539856, -16, 16, -16, 16, 16, -16, 16)
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+occlusion_layer_0/light_mask = 1
+occlusion_layer_0/sdf_collision = true
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+sources/0 = SubResource("TileSetAtlasSource_8jinh")
