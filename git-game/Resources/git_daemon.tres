@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GitCard" format=3 uid="uid://cmu2slhe7vjtl"]
+
+[ext_resource type="Texture2D" uid="uid://cwb072a5k51ri" path="res://Assets/cards/gitdaemon_persona_cardSD.png" id="1_734j8"]
+[ext_resource type="Script" uid="uid://dshjsxgkodplk" path="res://Resources/GitCard.gd" id="1_u8hlx"]
+
+[resource]
+script = ExtResource("1_u8hlx")
+command_name = "git daemon"
+description = "Enemies can be corrupted"
+icon = ExtResource("1_734j8")
+metadata/_custom_type_script = "uid://dshjsxgkodplk"

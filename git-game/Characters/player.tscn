@@ -6,6 +6,15 @@
 [ext_resource type="Script" uid="uid://brc7cyrr3v8" path="res://Resources/Stats.gd" id="2_4m0gv"]
 [ext_resource type="Texture2D" uid="uid://cv3qw4kobx5no" path="res://Assets/drones/elec_drone_charging.png" id="2_l48on"]
 [ext_resource type="Texture2D" uid="uid://bviki1rpfmdk" path="res://Assets/drones/elec_drone_death.png" id="3_4m0gv"]
+[ext_resource type="Script" uid="uid://bqf0nx2q31hgu" path="res://Scripts/card_manager.gd" id="7_mevwr"]
+[ext_resource type="Script" uid="uid://dshjsxgkodplk" path="res://Resources/GitCard.gd" id="8_iga2k"]
+[ext_resource type="Resource" uid="uid://dwmrm7o0ysi1x" path="res://Resources/git_rm.tres" id="9_y0e2x"]
+[ext_resource type="Resource" uid="uid://chbfmsxsh8c4e" path="res://Resources/git_clone.tres" id="10_8an5f"]
+[ext_resource type="Resource" uid="uid://26m43puv83if" path="res://Resources/git_branch.tres" id="11_0qaj4"]
+[ext_resource type="Resource" uid="uid://cmu2slhe7vjtl" path="res://Resources/git_daemon.tres" id="12_h3pa0"]
+[ext_resource type="Resource" uid="uid://crdrulx4675lf" path="res://Resources/git_restore.tres" id="13_ibds6"]
+[ext_resource type="Resource" uid="uid://g15cmu40qw5g" path="res://Resources/git_hash_object.tres" id="14_aw3oq"]
+[ext_resource type="PackedScene" uid="uid://bufreihnrtwny" path="res://Scenes/card_display.tscn" id="15_0l7lf"]
 
 [sub_resource type="Resource" id="Resource_4m0gv"]
 script = ExtResource("2_4m0gv")
@@ -185,3 +194,29 @@ shape = SubResource("CircleShape2D_65n15")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1015583936]
 zoom = Vector2(1.4, 1.4)
+
+[node name="Card_Manager" type="Control" parent="Camera2D" unique_id=1445051874 node_paths=PackedStringArray("cards_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -411.42188
+offset_top = -231.42188
+offset_right = 411.42188
+offset_bottom = 231.42188
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_mevwr")
+card_pool = Array[ExtResource("8_iga2k")]([ExtResource("9_y0e2x"), ExtResource("10_8an5f"), ExtResource("11_0qaj4"), ExtResource("12_h3pa0"), ExtResource("13_ibds6"), ExtResource("14_aw3oq")])
+cards_container = NodePath("HBoxContainer")
+card_display_scene = ExtResource("15_0l7lf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/Card_Manager" unique_id=300949774]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1

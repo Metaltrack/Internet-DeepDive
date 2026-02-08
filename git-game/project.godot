@@ -14,6 +14,10 @@ config/name="GIT_GAME"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*uid://drfn351u2r07x"
+
 [editor_plugins]
 
 enabled=PackedStringArray()
