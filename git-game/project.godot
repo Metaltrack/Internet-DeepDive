@@ -14,10 +14,27 @@ config/name="GIT_GAME"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Characters/": "orange",
+"res://Resources/": "yellow",
+"res://Scenes/": "green",
+"res://Scripts/": "blue",
+"res://Shaders/": "purple"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.09960491, 0.15452799, 0.19984391, 1)
