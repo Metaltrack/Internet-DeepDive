@@ -17,6 +17,13 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://qc3wdnenmskp"
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+GameManager="*uid://drfn351u2r07x"
+>>>>>>> Stashed changes
 
 [editor_plugins]
 
