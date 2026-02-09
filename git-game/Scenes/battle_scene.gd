@@ -15,14 +15,7 @@ func _ready() -> void:
 		$spawns/Marker2D2.add_child(bot)
 		bot.global_position = $spawns/Marker2D2.global_position
 		combat_tracker.append(bot)
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
 		bot_array.append(bot)
->>>>>>> Stashed changes
-=======
-		bot_array.append(bot)
->>>>>>> Stashed changes
 	else:
 		var bot1 = battle_enemy_scn.instantiate()
 		var bot2 = battle_enemy_scn.instantiate()
@@ -43,18 +36,9 @@ func _ready() -> void:
 	
 	print(combat_tracker)
 	
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
 	if GameManager.card_array[0]:
 		$card_selection/HBoxContainer/TextureButton.texture_normal = GameManager.card_array[0].icon
 	
->>>>>>> Stashed changes
-=======
-	if GameManager.card_array[0]:
-		$card_selection/HBoxContainer/TextureButton.texture_normal = GameManager.card_array[0].icon
-	
->>>>>>> Stashed changes
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_right"):

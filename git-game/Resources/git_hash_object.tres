@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GitCard" format=3 uid="uid://g15cmu40qw5g"]
+
+[ext_resource type="Script" uid="uid://dshjsxgkodplk" path="res://Resources/GitCard.gd" id="1_8kfhq"]
+[ext_resource type="Texture2D" uid="uid://c58t0vl85r0id" path="res://Assets/cards/githashobject_persona_cardSD.png" id="1_ew6jc"]
+
+[resource]
+script = ExtResource("1_8kfhq")
+command_name = "git hash-object"
+description = "Enemies can be stunned"
+icon = ExtResource("1_ew6jc")
+metadata/_custom_type_script = "uid://dshjsxgkodplk"

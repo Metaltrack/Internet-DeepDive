@@ -3,18 +3,8 @@
 [ext_resource type="Script" uid="uid://ccde02uf026p4" path="res://Scenes/battle_scene.gd" id="1_3gnqe"]
 [ext_resource type="TileSet" uid="uid://d2uksd4p8i4xo" path="res://Resources/Ground.tres" id="1_hdvqd"]
 [ext_resource type="TileSet" uid="uid://bnmj0rm7xl55r" path="res://Resources/Wall.tres" id="2_anwxn"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[ext_resource type="PackedScene" uid="uid://dmjnxe641alf6" path="res://Characters/player.tscn" id="3_anwxn"]
-[ext_resource type="Texture2D" uid="uid://d2jlir450rjt6" path="res://Assets/light.png" id="4_e5vbs"]
-=======
 [ext_resource type="Texture2D" uid="uid://d2jlir450rjt6" path="res://Assets/light.png" id="4_e5vbs"]
 [ext_resource type="PackedScene" uid="uid://dmjnxe641alf6" path="res://Characters/player.tscn" id="5_3gnqe"]
->>>>>>> Stashed changes
-=======
-[ext_resource type="Texture2D" uid="uid://d2jlir450rjt6" path="res://Assets/light.png" id="4_e5vbs"]
-[ext_resource type="PackedScene" uid="uid://dmjnxe641alf6" path="res://Characters/player.tscn" id="5_3gnqe"]
->>>>>>> Stashed changes
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_anwxn"]
 light_mode = 2
@@ -43,15 +33,6 @@ tile_set = ExtResource("2_anwxn")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=966548316]
 environment = SubResource("Environment_hdvqd")
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[node name="Player" parent="." unique_id=1236036128 instance=ExtResource("3_anwxn")]
-position = Vector2(476, 439)
-
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 [node name="Lights" type="Node2D" parent="." unique_id=1608200353]
 
 [node name="PointLight2D" type="PointLight2D" parent="Lights" unique_id=1824915684]
@@ -92,11 +73,6 @@ position = Vector2(481, 208)
 
 [node name="Marker2D3" type="Marker2D" parent="spawns" unique_id=1339404563]
 position = Vector2(735, 207)
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=233000814]
 position = Vector2(482, 306)
@@ -129,7 +105,3 @@ layout_mode = 2
 
 [node name="Player" parent="." unique_id=1236036128 instance=ExtResource("5_3gnqe")]
 position = Vector2(553, 341)
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes

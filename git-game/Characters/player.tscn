@@ -6,12 +6,6 @@
 [ext_resource type="Script" uid="uid://brc7cyrr3v8" path="res://Resources/Stats.gd" id="2_4m0gv"]
 [ext_resource type="Texture2D" uid="uid://cv3qw4kobx5no" path="res://Assets/drones/elec_drone_charging.png" id="2_l48on"]
 [ext_resource type="Texture2D" uid="uid://bviki1rpfmdk" path="res://Assets/drones/elec_drone_death.png" id="3_4m0gv"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[ext_resource type="Texture2D" uid="uid://d2jlir450rjt6" path="res://Assets/light.png" id="7_p728j"]
-=======
-=======
->>>>>>> Stashed changes
 [ext_resource type="Script" uid="uid://bqf0nx2q31hgu" path="res://Scripts/card_manager.gd" id="7_5slg2"]
 [ext_resource type="Texture2D" uid="uid://d2jlir450rjt6" path="res://Assets/light.png" id="7_p728j"]
 [ext_resource type="Script" uid="uid://dshjsxgkodplk" path="res://Resources/GitCard.gd" id="8_iga2k"]
@@ -22,7 +16,6 @@
 [ext_resource type="Resource" uid="uid://crdrulx4675lf" path="res://Resources/git_restore.tres" id="13_ibds6"]
 [ext_resource type="Resource" uid="uid://dwmrm7o0ysi1x" path="res://Resources/git_rm.tres" id="14_aw3oq"]
 [ext_resource type="PackedScene" uid="uid://bufreihnrtwny" path="res://Scenes/card_display.tscn" id="15_0l7lf"]
->>>>>>> Stashed changes
 
 [sub_resource type="Resource" id="Resource_4m0gv"]
 script = ExtResource("2_4m0gv")
@@ -212,14 +205,6 @@ shape = SubResource("CircleShape2D_65n15")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1015583936]
 zoom = Vector2(1.4, 1.4)
 
-<<<<<<< Updated upstream
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=33689636]
-energy = 0.25
-shadow_enabled = true
-texture = ExtResource("7_p728j")
-texture_scale = 2.0
-
-=======
 [node name="Card_Manager" type="Control" parent="Camera2D" unique_id=1445051874 node_paths=PackedStringArray("cards_container")]
 layout_mode = 3
 anchors_preset = 0
@@ -249,10 +234,6 @@ shadow_enabled = true
 texture = ExtResource("7_p728j")
 texture_scale = 2.0
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 [node name="initiation_area" type="Area2D" parent="." unique_id=1238072777]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="initiation_area" unique_id=556315652]

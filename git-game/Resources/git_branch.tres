@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GitCard" format=3 uid="uid://26m43puv83if"]
+
+[ext_resource type="Texture2D" uid="uid://dummwmc1j8uh1" path="res://Assets/cards/gitbranch_persona_cardSD.png" id="1_3obxi"]
+[ext_resource type="Script" uid="uid://dshjsxgkodplk" path="res://Resources/GitCard.gd" id="1_ma31r"]
+
+[resource]
+script = ExtResource("1_ma31r")
+command_name = "git branch"
+description = "Gain 1 extra action"
+icon = ExtResource("1_3obxi")
+metadata/_custom_type_script = "uid://dshjsxgkodplk"
