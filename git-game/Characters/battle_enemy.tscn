@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://dlksok3vj3wvu"]
+
+[ext_resource type="Texture2D" uid="uid://o47gf28ex0v2" path="res://Assets/drones/mine_drone_exploding.png" id="1_8q1jh"]
+[ext_resource type="Script" uid="uid://kgufvvlqddon" path="res://Characters/battle_enemy.gd" id="1_vvcdc"]
+[ext_resource type="Script" uid="uid://brc7cyrr3v8" path="res://Resources/Stats.gd" id="2_pu2wt"]
+[ext_resource type="Texture2D" uid="uid://cneqhw2nvsf7s" path="res://Assets/drones/mine_drone_death (1).png" id="2_vvcdc"]
+[ext_resource type="Texture2D" uid="uid://b3amwho1033q7" path="res://Assets/drones/mine_drone_idle.png" id="3_pu2wt"]
+
+[sub_resource type="Resource" id="Resource_atorn"]
+script = ExtResource("2_pu2wt")
+healh_restore = 10
+action_count = 1
+metadata/_custom_type_script = "uid://brc7cyrr3v8"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atorn"]
+atlas = ExtResource("1_8q1jh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxhfu"]
+atlas = ExtResource("1_8q1jh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7nea"]
+atlas = ExtResource("1_8q1jh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o82ck"]
+atlas = ExtResource("1_8q1jh")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybnev"]
+atlas = ExtResource("1_8q1jh")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1ggd"]
+atlas = ExtResource("1_8q1jh")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkho6"]
+atlas = ExtResource("1_8q1jh")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oirhx"]
+atlas = ExtResource("2_vvcdc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pucwp"]
+atlas = ExtResource("2_vvcdc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opo46"]
+atlas = ExtResource("3_pu2wt")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huwdw"]
+atlas = ExtResource("3_pu2wt")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7luv"]
+atlas = ExtResource("3_pu2wt")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_unh8v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atorn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxhfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7nea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o82ck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybnev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1ggd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkho6")
+}],
+"loop": false,
+"name": &"ATTACK",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oirhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pucwp")
+}],
+"loop": false,
+"name": &"DEATH",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opo46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huwdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7luv")
+}],
+"loop": true,
+"name": &"IDLE",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8q1jh"]
+radius = 27.0
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8q1jh"]
+closed = false
+cull_mode = 1
+polygon = PackedVector2Array(-6, -30, -6, -26, -15, -21, -21, -11, -22, 0, -15, 8, -6, 14, 5, 14, 14, 9, 19, 3, 19, -9, 15, -18, 9, -25, 9, -42, 6, -42, 6, -30)
+
+[node name="battle_enemy" type="CharacterBody2D" unique_id=126711060]
+script = ExtResource("1_vvcdc")
+enemy_stats = SubResource("Resource_atorn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1148220557]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_unh8v")
+animation = &"IDLE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1701449365]
+shape = SubResource("CircleShape2D_8q1jh")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=776042583]
+occluder = SubResource("OccluderPolygon2D_8q1jh")

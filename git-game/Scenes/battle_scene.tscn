@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://ba2q81ld1vgyg"]
 
+[ext_resource type="Script" uid="uid://ccde02uf026p4" path="res://Scenes/battle_scene.gd" id="1_3gnqe"]
 [ext_resource type="TileSet" uid="uid://d2uksd4p8i4xo" path="res://Resources/Ground.tres" id="1_hdvqd"]
 [ext_resource type="TileSet" uid="uid://bnmj0rm7xl55r" path="res://Resources/Wall.tres" id="2_anwxn"]
-[ext_resource type="PackedScene" uid="uid://dmjnxe641alf6" path="res://Characters/player.tscn" id="3_anwxn"]
 [ext_resource type="Texture2D" uid="uid://d2jlir450rjt6" path="res://Assets/light.png" id="4_e5vbs"]
+[ext_resource type="PackedScene" uid="uid://dmjnxe641alf6" path="res://Characters/player.tscn" id="5_3gnqe"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_anwxn"]
 light_mode = 2
@@ -16,6 +17,7 @@ glow_hdr_scale = 0.0
 
 [node name="Battle_scene" type="Node2D" unique_id=92706768]
 material = SubResource("CanvasItemMaterial_anwxn")
+script = ExtResource("1_3gnqe")
 
 [node name="GroundLayer" type="TileMapLayer" parent="." unique_id=1919056121]
 modulate = Color(1.353256, 1.353256, 1.353256, 1)
@@ -30,9 +32,6 @@ tile_set = ExtResource("2_anwxn")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=966548316]
 environment = SubResource("Environment_hdvqd")
-
-[node name="Player" parent="." unique_id=1236036128 instance=ExtResource("3_anwxn")]
-position = Vector2(476, 439)
 
 [node name="Lights" type="Node2D" parent="." unique_id=1608200353]
 
@@ -63,3 +62,46 @@ energy = 0.1
 shadow_enabled = true
 texture = ExtResource("4_e5vbs")
 texture_scale = 1.5
+
+[node name="spawns" type="Node2D" parent="." unique_id=1891831050]
+
+[node name="Marker2D" type="Marker2D" parent="spawns" unique_id=1997083517]
+position = Vector2(239, 207)
+
+[node name="Marker2D2" type="Marker2D" parent="spawns" unique_id=226377812]
+position = Vector2(481, 208)
+
+[node name="Marker2D3" type="Marker2D" parent="spawns" unique_id=1339404563]
+position = Vector2(735, 207)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=233000814]
+position = Vector2(482, 306)
+zoom = Vector2(1.265, 1.265)
+
+[node name="card_selection" type="Control" parent="." unique_id=1077181287]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="card_selection" unique_id=1935252797]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 339.0
+offset_right = 686.0
+offset_bottom = 819.0
+scale = Vector2(0.45, 0.45)
+
+[node name="TextureButton" type="TextureButton" parent="card_selection/HBoxContainer" unique_id=2054990439]
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="card_selection/HBoxContainer" unique_id=1972394259]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="TextureButton3" type="TextureButton" parent="card_selection/HBoxContainer" unique_id=1623550075]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="Player" parent="." unique_id=1236036128 instance=ExtResource("5_3gnqe")]
+position = Vector2(553, 341)

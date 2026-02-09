@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://d4a0soc8g7geu"]
+
+[ext_resource type="Script" uid="uid://bqf0nx2q31hgu" path="res://Scripts/card_manager.gd" id="1_8klf7"]
+[ext_resource type="Script" uid="uid://dshjsxgkodplk" path="res://Resources/GitCard.gd" id="2_w6ora"]
+[ext_resource type="PackedScene" uid="uid://bufreihnrtwny" path="res://Scenes/card_display.tscn" id="3_bdei6"]
+[ext_resource type="Resource" uid="uid://dwmrm7o0ysi1x" path="res://Resources/git_rm.tres" id="3_ev4nm"]
+[ext_resource type="Resource" uid="uid://chbfmsxsh8c4e" path="res://Resources/git_clone.tres" id="4_k230u"]
+[ext_resource type="Resource" uid="uid://26m43puv83if" path="res://Resources/git_branch.tres" id="5_bxqxh"]
+[ext_resource type="Resource" uid="uid://cmu2slhe7vjtl" path="res://Resources/git_daemon.tres" id="6_koc5i"]
+[ext_resource type="Resource" uid="uid://crdrulx4675lf" path="res://Resources/git_restore.tres" id="7_6xi1k"]
+[ext_resource type="Resource" uid="uid://g15cmu40qw5g" path="res://Resources/git_hash_object.tres" id="8_sslx2"]
+
+[node name="Card_Manager" type="Control" unique_id=1445051874 node_paths=PackedStringArray("cards_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_8klf7")
+card_pool = Array[ExtResource("2_w6ora")]([ExtResource("3_ev4nm"), ExtResource("4_k230u"), ExtResource("5_bxqxh"), ExtResource("6_koc5i"), ExtResource("7_6xi1k"), ExtResource("8_sslx2")])
+cards_container = NodePath("HBoxContainer")
+card_display_scene = ExtResource("3_bdei6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=300949774]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.0
+offset_top = 65.0
+offset_right = -799.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
