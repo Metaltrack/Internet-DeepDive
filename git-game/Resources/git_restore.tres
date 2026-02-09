@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GitCard" format=3 uid="uid://crdrulx4675lf"]
+
+[ext_resource type="Texture2D" uid="uid://bvag7t112p1p" path="res://Assets/cards/gitrestore_persona_cardSD.png" id="1_l63xa"]
+[ext_resource type="Script" uid="uid://dshjsxgkodplk" path="res://Resources/GitCard.gd" id="1_lvhu0"]
+
+[resource]
+script = ExtResource("1_lvhu0")
+command_name = "git restore"
+description = "gradually restore health"
+icon = ExtResource("1_l63xa")
+metadata/_custom_type_script = "uid://dshjsxgkodplk"

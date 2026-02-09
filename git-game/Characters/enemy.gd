@@ -40,6 +40,7 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.play("EXPLODE")
 			await $AnimatedSprite2D.animation_finished
 			Global.emit_signal("start_battle")
+			queue_free()
 	
 	velocity = patrol_dir * speed * delta
 	move_and_slide()

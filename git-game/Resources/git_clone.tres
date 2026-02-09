@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GitCard" format=3 uid="uid://chbfmsxsh8c4e"]
+
+[ext_resource type="Script" uid="uid://dshjsxgkodplk" path="res://Resources/GitCard.gd" id="1_8pcf5"]
+[ext_resource type="Texture2D" uid="uid://i1pto7l8q081" path="res://Assets/cards/gitclone_persona_cardSD.png" id="1_fhmnv"]
+
+[resource]
+script = ExtResource("1_8pcf5")
+icon = ExtResource("1_fhmnv")
+metadata/_custom_type_script = "uid://dshjsxgkodplk"

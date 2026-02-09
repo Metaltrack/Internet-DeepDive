@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d102onniban8q"]
+
+[ext_resource type="Script" uid="uid://bfxj60quf5o5n" path="res://Resources/packet.gd" id="1_gr2w1"]
+[ext_resource type="Texture2D" uid="uid://u3udqiqbilhd" path="res://Assets/itchio-pxl-retro-computer-icons-set-110/itchio-pxl-retro-computer-icons-set-110/itchio-pxl-retro-computer-icons-set-110.png" id="1_nutfr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gr2w1"]
+atlas = ExtResource("1_nutfr")
+region = Rect2(8, 304, 40, 40)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nutfr"]
+radius = 30.0
+
+[node name="packet" type="Node2D" unique_id=1275578050]
+script = ExtResource("1_gr2w1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=526557926]
+texture = SubResource("AtlasTexture_gr2w1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1880120452]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=848266696]
+shape = SubResource("CircleShape2D_nutfr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

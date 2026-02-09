@@ -3,8 +3,14 @@
 [ext_resource type="Script" uid="uid://ccde02uf026p4" path="res://Scenes/battle_scene.gd" id="1_3gnqe"]
 [ext_resource type="TileSet" uid="uid://d2uksd4p8i4xo" path="res://Resources/Ground.tres" id="1_hdvqd"]
 [ext_resource type="TileSet" uid="uid://bnmj0rm7xl55r" path="res://Resources/Wall.tres" id="2_anwxn"]
-[ext_resource type="PackedScene" uid="uid://dmjnxe641alf6" path="res://Characters/player.tscn" id="3_anwxn"]
 [ext_resource type="Texture2D" uid="uid://d2jlir450rjt6" path="res://Assets/light.png" id="4_e5vbs"]
+[ext_resource type="PackedScene" uid="uid://dmjnxe641alf6" path="res://Characters/player.tscn" id="5_3gnqe"]
+[ext_resource type="Texture2D" uid="uid://bm0wlacy6411u" path="res://Assets/cards/gitrm_persona_cardSD.png" id="5_ed262"]
+[ext_resource type="FontFile" uid="uid://blb0vvxnoh0di" path="res://Assets/queering.otf" id="5_gt16y"]
+[ext_resource type="Texture2D" uid="uid://u3udqiqbilhd" path="res://Assets/itchio-pxl-retro-computer-icons-set-110/itchio-pxl-retro-computer-icons-set-110/itchio-pxl-retro-computer-icons-set-110.png" id="6_20f6w"]
+[ext_resource type="Texture2D" uid="uid://dk3ai2b7mqvsc" path="res://Assets/Asset 11.png" id="8_ms847"]
+[ext_resource type="Texture2D" uid="uid://j738q606g8on" path="res://Assets/itchio-pxl-retro-computer-icons-set-110/itchio-pxl-retro-computer-icons-set-110/separated-items/itchio-pxl-retro-computer-icons-set-110-item108.png" id="8_w4764"]
+[ext_resource type="Texture2D" uid="uid://culoxtdpv0p28" path="res://Assets/Asset 8.png" id="9_f4ggb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_anwxn"]
 light_mode = 2
@@ -14,6 +20,60 @@ background_mode = 3
 glow_enabled = true
 glow_bloom = 1.0
 glow_hdr_scale = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4764"]
+atlas = ExtResource("6_20f6w")
+region = Rect2(232, 192, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20f6w"]
+atlas = ExtResource("6_20f6w")
+region = Rect2(80, 232, 40, 32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20f6w"]
+bg_color = Color(0.73738223, 0.50402856, 0.74906844, 0.39215687)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f4ggb"]
+font = ExtResource("5_gt16y")
+font_size = 64
+outline_size = 5
+outline_color = Color(1, 0, 0, 0.7058824)
+shadow_size = 15
+shadow_color = Color(1.9974261e-06, 0.44805533, 0.36013216, 1)
+shadow_offset = Vector2(-3, 1)
+
+[sub_resource type="Animation" id="Animation_w4764"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_selection:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(200, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_20f6w"]
+resource_name = "show"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_selection:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(200, -0.25, 0, 0.4, 49.5, -1.5, 0, 26, 0, -12.877372, 0, -0.3, -65.5, 0, 0),
+"times": PackedFloat32Array(0, 0.6666667, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w4764"]
+_data = {
+&"RESET": SubResource("Animation_w4764"),
+&"show": SubResource("Animation_20f6w")
+}
 
 [node name="Battle_scene" type="Node2D" unique_id=92706768]
 material = SubResource("CanvasItemMaterial_anwxn")
@@ -32,9 +92,6 @@ tile_set = ExtResource("2_anwxn")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=966548316]
 environment = SubResource("Environment_hdvqd")
-
-[node name="Player" parent="." unique_id=1236036128 instance=ExtResource("3_anwxn")]
-position = Vector2(476, 439)
 
 [node name="Lights" type="Node2D" parent="." unique_id=1608200353]
 
@@ -76,3 +133,106 @@ position = Vector2(481, 208)
 
 [node name="Marker2D3" type="Marker2D" parent="spawns" unique_id=1339404563]
 position = Vector2(735, 207)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=233000814]
+position = Vector2(482, 306)
+zoom = Vector2(1.295, 1.295)
+
+[node name="card_selection" type="Control" parent="." unique_id=1077181287]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 200.0
+offset_right = 40.0
+offset_bottom = 240.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="card_selection" unique_id=1935252797]
+z_index = 1
+layout_mode = 0
+offset_left = 97.0
+offset_top = 352.0
+offset_right = 745.0
+offset_bottom = 832.0
+rotation = -0.06523503
+scale = Vector2(0.45, 0.45)
+
+[node name="TextureButton" type="TextureButton" parent="card_selection/HBoxContainer" unique_id=2054990439]
+z_index = 1
+layout_mode = 2
+texture_normal = ExtResource("5_ed262")
+
+[node name="Attack" type="Button" parent="card_selection" unique_id=1431441061]
+z_index = 1
+layout_mode = 0
+offset_left = 767.0
+offset_top = 396.0
+offset_right = 887.0
+offset_bottom = 463.0
+theme_override_fonts/font = ExtResource("5_gt16y")
+theme_override_font_sizes/font_size = 32
+text = "ATTACK"
+icon = SubResource("AtlasTexture_w4764")
+
+[node name="Escape" type="Button" parent="card_selection" unique_id=752890709]
+z_index = 1
+layout_mode = 0
+offset_left = 687.0
+offset_top = 482.0
+offset_right = 807.0
+offset_bottom = 549.0
+theme_override_fonts/font = ExtResource("5_gt16y")
+theme_override_font_sizes/font_size = 32
+text = "ESCAPE"
+icon = SubResource("AtlasTexture_20f6w")
+
+[node name="Panel" type="Panel" parent="card_selection" unique_id=62626805]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 419.0
+offset_right = 964.0
+offset_bottom = 572.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_20f6w")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="card_selection" unique_id=1332712798]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 432.0
+offset_right = 1662.0
+offset_bottom = 590.0
+scale = Vector2(0.22, 0.22)
+texture_under = ExtResource("8_ms847")
+
+[node name="health_bar" type="TextureProgressBar" parent="card_selection" unique_id=891932827]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 431.0
+offset_right = 1586.0
+offset_bottom = 537.0
+scale = Vector2(0.25, 0.25)
+value = 100.0
+texture_progress = ExtResource("9_f4ggb")
+
+[node name="Label" type="Label" parent="card_selection" unique_id=667506196]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 466.0
+offset_right = 500.0
+offset_bottom = 575.0
+theme_override_fonts/font = ExtResource("5_gt16y")
+theme_override_font_sizes/font_size = 64
+text = "CHARGE"
+label_settings = SubResource("LabelSettings_f4ggb")
+
+[node name="Player" parent="." unique_id=1236036128 instance=ExtResource("5_3gnqe")]
+position = Vector2(553, 341)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1701177687]
+libraries/ = SubResource("AnimationLibrary_w4764")
+
+[node name="enemy_selector_token" type="Node2D" parent="." unique_id=622074315]
+
+[node name="Sprite2D" type="Sprite2D" parent="enemy_selector_token" unique_id=873524912]
+position = Vector2(42, 42)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_w4764")
+
+[connection signal="pressed" from="card_selection/Attack" to="." method="_on_attack_pressed"]

@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://dlksok3vj3wvu"]
 
 [ext_resource type="Texture2D" uid="uid://o47gf28ex0v2" path="res://Assets/drones/mine_drone_exploding.png" id="1_8q1jh"]
+[ext_resource type="Script" uid="uid://kgufvvlqddon" path="res://Characters/battle_enemy.gd" id="1_vvcdc"]
+[ext_resource type="Script" uid="uid://brc7cyrr3v8" path="res://Resources/Stats.gd" id="2_pu2wt"]
 [ext_resource type="Texture2D" uid="uid://cneqhw2nvsf7s" path="res://Assets/drones/mine_drone_death (1).png" id="2_vvcdc"]
 [ext_resource type="Texture2D" uid="uid://b3amwho1033q7" path="res://Assets/drones/mine_drone_idle.png" id="3_pu2wt"]
+
+[sub_resource type="Resource" id="Resource_atorn"]
+script = ExtResource("2_pu2wt")
+healh_restore = 10
+action_count = 1
+metadata/_custom_type_script = "uid://brc7cyrr3v8"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_atorn"]
 atlas = ExtResource("1_8q1jh")
@@ -75,6 +83,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nkho6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1ggd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybnev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o82ck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7nea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxhfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atorn")
 }],
 "loop": false,
 "name": &"ATTACK",
@@ -86,6 +112,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pucwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oirhx")
 }],
 "loop": false,
 "name": &"DEATH",
@@ -114,12 +143,14 @@ closed = false
 cull_mode = 1
 polygon = PackedVector2Array(-6, -30, -6, -26, -15, -21, -21, -11, -22, 0, -15, 8, -6, 14, 5, 14, 14, 9, 19, 3, 19, -9, 15, -18, 9, -25, 9, -42, 6, -42, 6, -30)
 
-[node name="battle_enemy" type="CharacterBody2D" unique_id=126711060]
+[node name="battle_enemy" type="CharacterBody2D" unique_id=126711060 groups=["ENEMY"]]
+script = ExtResource("1_vvcdc")
+enemy_stats = SubResource("Resource_atorn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1148220557]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_unh8v")
-animation = &"IDLE"
+animation = &"DEATH"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1701449365]
 shape = SubResource("CircleShape2D_8q1jh")
