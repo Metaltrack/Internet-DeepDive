@@ -6,10 +6,14 @@
 [ext_resource type="Script" uid="uid://brc7cyrr3v8" path="res://Resources/Stats.gd" id="2_4m0gv"]
 [ext_resource type="Texture2D" uid="uid://cv3qw4kobx5no" path="res://Assets/drones/elec_drone_charging.png" id="2_l48on"]
 [ext_resource type="Texture2D" uid="uid://bviki1rpfmdk" path="res://Assets/drones/elec_drone_death.png" id="3_4m0gv"]
+[ext_resource type="Texture2D" uid="uid://d2jlir450rjt6" path="res://Assets/light.png" id="7_p728j"]
 
 [sub_resource type="Resource" id="Resource_4m0gv"]
 script = ExtResource("2_4m0gv")
 metadata/_custom_type_script = "uid://brc7cyrr3v8"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p728j"]
+light_mode = 1
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p728j"]
 atlas = ExtResource("1_65n15")
@@ -170,12 +174,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_65n15"]
 radius = 27.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1236036128]
+[node name="Player" type="CharacterBody2D" unique_id=1236036128 groups=["PLAYER"]]
+collision_layer = 3
+collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_l48on")
 player_stats = SubResource("Resource_4m0gv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1606051672]
+material = SubResource("CanvasItemMaterial_p728j")
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_l48on")
 animation = &"IDLE"
@@ -185,3 +192,9 @@ shape = SubResource("CircleShape2D_65n15")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1015583936]
 zoom = Vector2(1.4, 1.4)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=33689636]
+energy = 0.25
+shadow_enabled = true
+texture = ExtResource("7_p728j")
+texture_scale = 2.0
