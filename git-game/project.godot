@@ -32,6 +32,7 @@ folder_colors={
 "res://Scenes/": "teal",
 "res://Scripts/": "blue",
 "res://Shaders/": "purple",
+"res://deepassets/": "purple",
 "res://maps/": "green"
 }
 
