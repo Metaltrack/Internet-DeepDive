@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://ba2q81ld1vgyg"]
 
+[ext_resource type="Script" uid="uid://ccde02uf026p4" path="res://Scenes/battle_scene.gd" id="1_3gnqe"]
 [ext_resource type="TileSet" uid="uid://d2uksd4p8i4xo" path="res://Resources/Ground.tres" id="1_hdvqd"]
 [ext_resource type="TileSet" uid="uid://bnmj0rm7xl55r" path="res://Resources/Wall.tres" id="2_anwxn"]
 [ext_resource type="PackedScene" uid="uid://dmjnxe641alf6" path="res://Characters/player.tscn" id="3_anwxn"]
@@ -16,6 +17,7 @@ glow_hdr_scale = 0.0
 
 [node name="Battle_scene" type="Node2D" unique_id=92706768]
 material = SubResource("CanvasItemMaterial_anwxn")
+script = ExtResource("1_3gnqe")
 
 [node name="GroundLayer" type="TileMapLayer" parent="." unique_id=1919056121]
 modulate = Color(1.353256, 1.353256, 1.353256, 1)
@@ -63,3 +65,14 @@ energy = 0.1
 shadow_enabled = true
 texture = ExtResource("4_e5vbs")
 texture_scale = 1.5
+
+[node name="spawns" type="Node2D" parent="." unique_id=1891831050]
+
+[node name="Marker2D" type="Marker2D" parent="spawns" unique_id=1997083517]
+position = Vector2(239, 207)
+
+[node name="Marker2D2" type="Marker2D" parent="spawns" unique_id=226377812]
+position = Vector2(481, 208)
+
+[node name="Marker2D3" type="Marker2D" parent="spawns" unique_id=1339404563]
+position = Vector2(735, 207)

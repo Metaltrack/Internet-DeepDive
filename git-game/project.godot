@@ -36,6 +36,7 @@ folder_colors={
 [global_group]
 
 PLAYER=""
+ENEMY=""
 
 [physics]
 
