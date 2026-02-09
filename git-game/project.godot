@@ -16,6 +16,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Global="*uid://qc3wdnenmskp"
 GameManager="*uid://drfn351u2r07x"
 
 [editor_plugins]
@@ -32,6 +33,11 @@ folder_colors={
 "res://Scripts/": "blue",
 "res://Shaders/": "purple"
 }
+
+[global_group]
+
+PLAYER=""
+ENEMY=""
 
 [physics]
 
